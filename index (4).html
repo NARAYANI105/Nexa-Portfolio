@@ -637,7 +637,14 @@ body:has(button:hover) .cursor-outline {
   transition: width 1.2s cubic-bezier(0.4,0,0.2,1);
 }
 .skill-percent { font-size: 0.75rem; color: var(--accent2); font-weight: 600; }
+/* Hide Skill Percentage & Progress Bars */
 
+.skill-percent,
+.skill-percentage,
+.skill-bar-wrap,
+.skill-bar {
+    display: none !important;
+}
 /* =============================================
    PROJECTS SECTION
    ============================================= */
@@ -1885,14 +1892,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.skills-grid .skill-card').forEach((c,i) => { c.style.transitionDelay=`${i*0.05}s`; });
   document.querySelectorAll('.projects-grid .project-card').forEach((c,i) => { c.style.transitionDelay=`${i*0.08}s`; });
 });
-    /* Hide Skill Percentage & Progress Bars */
-
-.skill-percent,
-.skill-percentage,
-.skill-bar-wrap,
-.skill-bar {
-    display: none !important;
-}
+   
   </script>
 </body>
 </html>
